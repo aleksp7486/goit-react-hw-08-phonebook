@@ -37,7 +37,6 @@ export const Btn = styled.button`
   background-color: ${p => p.theme.colors.primary};
   border: none;
   border-radius: ${p => p.theme.radii.normal};
-
   cursor: pointer;
   transition: background-color 200ms ease-in;
   span {
