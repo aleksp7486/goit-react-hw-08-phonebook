@@ -19,7 +19,7 @@ export const Icon = styled.span`
   justify-content: center;
   align-items: center;
   margin-right: ${p => p.theme.space[2]}px;
-  color: ${p => p.theme.colors.accent};
+  color: ${p => p.theme.colors.primary};
 `;
 
 export const Phone = styled.span`

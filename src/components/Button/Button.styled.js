@@ -12,7 +12,7 @@ export const Btn = styled.button`
   border: none;
   border-radius: ${p => p.theme.radii.normal};
   cursor: pointer;
-  transition: background-color 200ms ease-in;
+  transition: background-color 200ms linear;
   span {
     display: inline-flex;
     justify-content: center;
