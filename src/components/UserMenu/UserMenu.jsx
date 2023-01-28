@@ -3,7 +3,8 @@ import { MdLogout } from 'react-icons/md';
 import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
 import { Box } from 'components/Box';
-import { Name, Btn } from './UserMenu.styled';
+import { Name } from './UserMenu.styled';
+import Button from 'components/Button';
 
 const UserMenu = () => {
   const dispatch = useDispatch();
@@ -13,12 +14,12 @@ const UserMenu = () => {
   return (
     <Box display="flex" alignItems="center">
       <Name>{user.name}</Name>
-      <Btn onClick={handleLogOut}>
-        <span>
-          <MdLogout />
-        </span>
-        Logout
-      </Btn>
+      <Button
+        type="button"
+        handelClick={handleLogOut}
+        title="Logout"
+        icon={MdLogout}
+      />
     </Box>
   );
 };

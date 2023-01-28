@@ -1,10 +1,11 @@
 import { BsFillPersonPlusFill } from 'react-icons/bs';
 import { Formik, Form } from 'formik';
-import { InputWrap, Label, Input, Btn, Error } from './ContactForm.styled';
+import { InputWrap, Label, Input, Error } from './ContactForm.styled';
 import * as yup from 'yup';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
+import Button from 'components/Button';
 
 const initialValues = {
   name: '',
@@ -67,13 +68,7 @@ export const ContactForm = () => {
           />
           <Error name="number" component="p" />
         </InputWrap>
-
-        <Btn type="submit">
-          <span>
-            <BsFillPersonPlusFill />
-          </span>
-          Add contact
-        </Btn>
+        <Button title="Add contact" icon={BsFillPersonPlusFill} />
       </Form>
     </Formik>
   );

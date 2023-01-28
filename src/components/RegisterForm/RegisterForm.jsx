@@ -1,8 +1,9 @@
-import { InputWrap, Label, Input, Btn, Error } from './RegisterForm.styled';
+import { InputWrap, Label, Input, Error } from './RegisterForm.styled';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
+import Button from 'components/Button';
 
 const initialValues = {
   name: '',
@@ -75,7 +76,7 @@ const RegisterForm = () => {
           <Error name="password" component="p" />
         </InputWrap>
 
-        <Btn type="submit">Register</Btn>
+        <Button title="Register" />
       </Form>
     </Formik>
   );

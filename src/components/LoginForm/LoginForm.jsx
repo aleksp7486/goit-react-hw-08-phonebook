@@ -1,9 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 import { MdLogin } from 'react-icons/md';
-import { InputWrap, Label, Input, Btn, Error } from './LoginForm.styled';
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
+import Button from 'components/Button';
+import { InputWrap, Label, Input, Error } from './LoginForm.styled';
 
 const initialValues = {
   email: '',
@@ -62,12 +63,7 @@ const LoginForm = () => {
           />
           <Error name="password" component="p" />
         </InputWrap>
-        <Btn type="submit">
-          <span>
-            <MdLogin />
-          </span>
-          Login
-        </Btn>
+        <Button title="Login" icon={MdLogin} />
       </Form>
     </Formik>
   );
