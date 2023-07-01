@@ -18,7 +18,7 @@ export const Icon = styled.span`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-right: ${p => p.theme.space[2]}px;
+  margin-right: ${p => p.theme.space[0]};
   color: ${p => p.theme.colors.primary};
 `;
 

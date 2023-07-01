@@ -4,7 +4,6 @@ export const Btn = styled.button`
   display: flex;
   flex-shrink: 0;
   justify-content: center;
-  align-items: center;
   padding: ${p => p.theme.space[3]}px ${p => p.theme.space[3]}px;
   color: ${p => p.theme.colors.white};
   font-weight: 700;
@@ -16,8 +15,7 @@ export const Btn = styled.button`
   span {
     display: inline-flex;
     justify-content: center;
-    align-items: center;
-    margin-right: ${p => p.theme.space[2]}px;
+    margin-right: ${p => (p.children[1] ? p.theme.space[2] : 0)}px;
   }
   :hover {
     background-color: ${p => p.theme.colors.secondary};
